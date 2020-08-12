@@ -13,6 +13,8 @@
 		A262B0B924B0A08600EE1233 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A262B0B724B0A08600EE1233 /* Main.storyboard */; };
 		A262B0BB24B0A08900EE1233 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A262B0BA24B0A08900EE1233 /* Assets.xcassets */; };
 		A262B0BE24B0A08900EE1233 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A262B0BC24B0A08900EE1233 /* LaunchScreen.storyboard */; };
+		A26BE54024B19BC300C853F9 /* PomodoroViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A26BE53F24B19BC300C853F9 /* PomodoroViewController.swift */; };
+		A26BE54224B1E54700C853F9 /* alarm_sound.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = A26BE54124B1E54700C853F9 /* alarm_sound.mp3 */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +26,8 @@
 		A262B0BA24B0A08900EE1233 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A262B0BD24B0A08900EE1233 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A262B0BF24B0A08900EE1233 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A26BE53F24B19BC300C853F9 /* PomodoroViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PomodoroViewController.swift; sourceTree = "<group>"; };
+		A26BE54124B1E54700C853F9 /* alarm_sound.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = alarm_sound.mp3; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,8 +63,10 @@
 				A262B0B124B0A08600EE1233 /* AppDelegate.swift */,
 				A262B0B324B0A08600EE1233 /* SceneDelegate.swift */,
 				A262B0B524B0A08600EE1233 /* ViewController.swift */,
+				A26BE53F24B19BC300C853F9 /* PomodoroViewController.swift */,
 				A262B0B724B0A08600EE1233 /* Main.storyboard */,
 				A262B0BA24B0A08900EE1233 /* Assets.xcassets */,
+				A26BE54124B1E54700C853F9 /* alarm_sound.mp3 */,
 				A262B0BC24B0A08900EE1233 /* LaunchScreen.storyboard */,
 				A262B0BF24B0A08900EE1233 /* Info.plist */,
 			);
@@ -127,6 +133,7 @@
 			files = (
 				A262B0BE24B0A08900EE1233 /* LaunchScreen.storyboard in Resources */,
 				A262B0BB24B0A08900EE1233 /* Assets.xcassets in Resources */,
+				A26BE54224B1E54700C853F9 /* alarm_sound.mp3 in Resources */,
 				A262B0B924B0A08600EE1233 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -139,6 +146,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A262B0B624B0A08600EE1233 /* ViewController.swift in Sources */,
+				A26BE54024B19BC300C853F9 /* PomodoroViewController.swift in Sources */,
 				A262B0B224B0A08600EE1233 /* AppDelegate.swift in Sources */,
 				A262B0B424B0A08600EE1233 /* SceneDelegate.swift in Sources */,
 			);
