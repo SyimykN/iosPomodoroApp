@@ -62,15 +62,31 @@
 			children = (
 				A262B0B124B0A08600EE1233 /* AppDelegate.swift */,
 				A262B0B324B0A08600EE1233 /* SceneDelegate.swift */,
-				A262B0B524B0A08600EE1233 /* ViewController.swift */,
-				A26BE53F24B19BC300C853F9 /* PomodoroViewController.swift */,
-				A262B0B724B0A08600EE1233 /* Main.storyboard */,
+				A26CCF3524EAAF3900E9879E /* View */,
+				A26CCF3624EAAF4400E9879E /* Controller */,
 				A262B0BA24B0A08900EE1233 /* Assets.xcassets */,
 				A26BE54124B1E54700C853F9 /* alarm_sound.mp3 */,
 				A262B0BC24B0A08900EE1233 /* LaunchScreen.storyboard */,
 				A262B0BF24B0A08900EE1233 /* Info.plist */,
 			);
 			path = PomodoroApp;
+			sourceTree = "<group>";
+		};
+		A26CCF3524EAAF3900E9879E /* View */ = {
+			isa = PBXGroup;
+			children = (
+				A262B0B724B0A08600EE1233 /* Main.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		A26CCF3624EAAF4400E9879E /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				A262B0B524B0A08600EE1233 /* ViewController.swift */,
+				A26BE53F24B19BC300C853F9 /* PomodoroViewController.swift */,
+			);
+			path = Controller;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
