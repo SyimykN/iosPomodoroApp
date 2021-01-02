@@ -10,6 +10,11 @@ import UIKit
 import AVFoundation
 
 class PomodoroViewController: UIViewController {
+    
+    var settedPomodoro : Int?
+    var settedShortBreak : Int?
+    var settedLongBreak : Int?
+    
     var audioPlayer = AVAudioPlayer()
     var timer = Timer()
     var isTimerStarted = false
@@ -23,9 +28,7 @@ class PomodoroViewController: UIViewController {
     @IBOutlet weak var quoteLabel: UILabel!
     
     
-    var settedPomodoro : Int?
-    var settedShortBreak : Int?
-    var settedLongBreak : Int?
+    
     
     
     var time = 0
