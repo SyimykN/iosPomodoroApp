@@ -17,7 +17,6 @@ class PomodoroViewController: UIViewController {
     
     var audioPlayer = AVAudioPlayer()
     var timer = Timer()
-    var isTimerStarted = false
     
     
     @IBOutlet weak var ShortBTN: UIButton!
@@ -60,17 +59,10 @@ class PomodoroViewController: UIViewController {
     
     @IBAction func startPressed(_ sender: Any) {
         if startBTN.currentTitle == "Start"{
-            if !isTimerStarted{
-                startTimer()
-                isTimerStarted = true
-                startBTN.setTitle("Stop", for: .normal)
-            }else{
-                timer.invalidate()
-                isTimerStarted = false
-            }
+            startTimer()
+            startBTN.setTitle("Stop", for: .normal)
         }else{
             timer.invalidate()
-            isTimerStarted = false
             startBTN.setTitle("Start", for: .normal)
         }
     }
@@ -83,40 +75,39 @@ class PomodoroViewController: UIViewController {
     
     @objc func updateTimer(){
         if time > 0{
-        time -= 1
-        clock.text = formatTime()
+            time -= 1
+            clock.text = formatTime()
         }else{
             timer.invalidate()
             audioPlayer.play()
             clock.text = formatTime()
             time = saveTime
             startBTN.setTitle("Start", for: .normal)
-            
-            //
         }
     }
     
     func formatTime() -> String{
         if time > 0{
-        let minutes = Int(time) / 60 % 60
-        let seconds = Int(time) % 60
-        return String(format: "%02i:%02i", minutes, seconds)
-    }else{
-        let minutes = Int(saveTime) / 60 % 60
-        let seconds = Int(saveTime) % 60
-        return String(format: "%02i:%02i", minutes, seconds)
-    }
+            let minutes = time / 60 % 60
+            let seconds = time % 60
+            return String(format: "%02i:%02i", minutes, seconds)
+        }else{
+            let minutes = saveTime / 60 % 60
+            let seconds = saveTime % 60
+            return String(format: "%02i:%02i", minutes, seconds)
+        }
+        
     }
     
     
-//MARK: - ShortButtonPressed
+    //MARK: - ShortButtonPressed
     
     @IBAction func shortBreakPressed(_ sender: UIButton) {
         clock.text = "\(settedShortBreak!) : 00"
         if let saveShort = settedShortBreak{
-                   time = saveShort * 60
-                   saveTime = saveShort * 60
-               }
+            time = saveShort * 60
+            saveTime = saveShort * 60
+        }
         view.backgroundColor = UIColor.cyan
         
         
@@ -126,17 +117,17 @@ class PomodoroViewController: UIViewController {
         PomodoroBTn.backgroundColor = UIColor(red: 321, green: 322, blue: 123, alpha: 0.0)
         LongBTN.backgroundColor = UIColor(red: 321, green: 322, blue: 123, alpha: 0.0)
     }
-  
     
     
- //MARK: - LongButtonPressed
+    
+    //MARK: - LongButtonPressed
     
     @IBAction func LongBreakBtnPressed(_ sender: UIButton) {
         clock.text = "\(settedLongBreak!) : 00"
         if let saveLong = settedLongBreak{
-                   time = saveLong * 60
-                   saveTime = saveLong * 60
-               }
+            time = saveLong * 60
+            saveTime = saveLong * 60
+        }
         view.backgroundColor = UIColor.green
         
         
@@ -151,9 +142,9 @@ class PomodoroViewController: UIViewController {
     @IBAction func PomodoroBtnPressed(_ sender: Any) {
         clock.text = "\(settedPomodoro!) : 00"
         if let savePomodoro = settedPomodoro{
-                   time = savePomodoro * 60
-                   saveTime = savePomodoro * 60
-               }
+            time = savePomodoro * 60
+            saveTime = savePomodoro * 60
+        }
         view.backgroundColor = UIColor.systemBlue
         
         
@@ -164,7 +155,7 @@ class PomodoroViewController: UIViewController {
     }
     
     
-
-//MARK: - Helping Method to Reset Timer When Its Done
+    
+    //MARK: - Helping Method to Reset Timer When Its Done
     
 }
