@@ -103,6 +103,14 @@ class PomodoroViewController: UIViewController {
     //MARK: - ShortButtonPressed
     
     @IBAction func shortBreakPressed(_ sender: UIButton) {
+        
+        if startBTN.currentTitle == "Stop"{
+                 timer.invalidate()
+                 startBTN.setTitle("Start", for: .normal)
+             }
+        
+        
+        
         clock.text = "\(settedShortBreak!) : 00"
         if let saveShort = settedShortBreak{
             time = saveShort * 60
@@ -123,6 +131,12 @@ class PomodoroViewController: UIViewController {
     //MARK: - LongButtonPressed
     
     @IBAction func LongBreakBtnPressed(_ sender: UIButton) {
+        
+        if startBTN.currentTitle == "Stop"{
+                        timer.invalidate()
+                        startBTN.setTitle("Start", for: .normal)
+                    }
+        
         clock.text = "\(settedLongBreak!) : 00"
         if let saveLong = settedLongBreak{
             time = saveLong * 60
@@ -140,6 +154,13 @@ class PomodoroViewController: UIViewController {
     //MARK: - pomodoroBTNPressed
     
     @IBAction func PomodoroBtnPressed(_ sender: Any) {
+        
+        if startBTN.currentTitle == "Stop"{
+                        timer.invalidate()
+                        startBTN.setTitle("Start", for: .normal)
+                    }
+        
+        
         clock.text = "\(settedPomodoro!) : 00"
         if let savePomodoro = settedPomodoro{
             time = savePomodoro * 60
